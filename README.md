@@ -74,55 +74,57 @@ NOTE: You will not lose points if your model does not achieve target performance
 5. Save and export your results to an HDF5 file, and name it AlphabetSoupCharity_Optimization.h5.
 
 # Final Analysis and Report on the Neural Network Model
-Given below is my Final Report and Analysis of the Neural Network Model along with answers to the questions posed in the assignment:
 
-Overview of the analysis: Explain the purpose of this analysis. ANSWER - The purpose of the model was to create an algorithm to help Alphabet Soup, predict whether or not applicants for funding will be successful. The model was a binary classifier that was able to predict with a fairly high degree of accuracy if the funding will be successful or not.
+Below is my final report and analysis of the Neural Network Model, along with answers to the questions posed in the assignment:
 
-Results: Using bulleted lists and images to support your answers, address the following questions.
+## Overview of the Analysis:
 
-Data Preprocessing
+- Purpose: The objective of this analysis was to develop an algorithm for Alphabet Soup to predict the likelihood of success for applicants seeking funding. The model is a binary classifier designed to predict with a reasonably high level of accuracy whether the funding will be successful or not.
 
-What variable(s) are considered the target(s) for your model? ANSWER - The variable for the Target was identified as the column IS_SUCCESSFUL.
-What variable(s) are considered to be the features for your model? ANSWER - The following columns were considered as features for the model:
-NAME
-APPLICATION_TYPE
-AFFILIATION
-CLASSIFICATION
-USE_CASE
-ORGANIZATION
-STATUS
-INCOME_AMT
-SPECIAL_CONSIDERATIONS
-ASK_AMT
-What variable(s) are neither targets nor features, and should be removed from the input data? ANSWER - The column or variable that can be removed is EIN as it is an identifier for the applicant organization and has no impact on the behavior of the model.
-Compiling, Training, and Evaluating the Model
+## Results:
 
-How many neurons, layers, and activation functions did you select for your neural network model, and why? ANSWER In the Optimized version of the model, I used 3 hidden layers each with multiple neurons which increased the accuracy to <75% to 79%. The Initial model had only 2 layers. Although the number of epochs did not change between the Initial and the Optimized Model, adding a 3rd Layer increased the accuracy of the model.
+### Data Preprocessing:
 
-Were you able to achieve the target model performance? ANSWER - Yes by optimizing the model, I was able to increase the accuracy from 72% a little over 79%.
+- Target Variable: The target variable for the model was identified as the column IS_SUCCESSFUL.
+- Feature Variables: The following columns were used as features for the model:
+           - NAME
+           - APPLICATION_TYPE
+           - AFFILIATION
+           - CLASSIFICATION
+           - USE_CASE
+           - ORGANIZATION
+           - STATUS
+           - INCOME_AMT
+           - SPECIAL_CONSIDERATIONS
+           - ASK_AMT
+- Variables to Remove: The EIN column was removed, as it serves only as an identifier for the applicant organization and does not affect the model's behavior.
 
-What steps did you take to try and increase model performance? ANSWER The following steps were taken to optimize and increase the performance of the model:
+## Compiling, Training, and Evaluating the Model:
 
-Instead of dropping both the EIN and Name columns, only the EIN column was dropped. However, only the names which appeared more than 5 times were considered.
+- Model Architecture: The optimized model used 3 hidden layers with multiple neurons, which increased the accuracy from under 75% to 79%. The initial model had only 2 layers. While the number of epochs remained constant, adding a third layer improved the model's accuracy.
+- Target Performance: Yes, by optimizing the model, the accuracy increased from 72% to slightly over 79%.
+- Steps to Increase Performance:
+             - Instead of dropping both the EIN and NAME columns, only the EIN column was dropped. However, only names that                  appeared more than 5 times were considered.
+             - A third activation layer was added to the model in the following order to boost accuracy to over 75%:
+                      - 1st Layer: ReLU
+                      - 2nd Layer: Tanh
+                      - 3rd Layer: Sigmoid
+             - It was observed that using Tanh for the 2nd layer and Sigmoid for the 3rd layer boosted performance to over                   79%.
 
-Added a 3rd Activation Layer to the model in the following order to boost the accuracy to > 75% :
+## Summary and Recommendation:
 
-1st Layer - relu
-2nd Layer - tanh
-3rd Layer - sigmoid
-It was observed that instead of both the 2nd and 3rd Layer to be sigmoid, when I used the 2nd Layer as tanh and the 3rd Layer as sigmoid it boosted the performance to beyond 79%.
+Overall, optimizing the model increased accuracy to over 79%. This means that the model correctly classified the test data 79% of the time. Applicants have nearly an 80% chance of being successful if they meet the following criteria:
 
-Summary: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
+- The applicant's name appears more than 5 times (indicating they have applied more than 5 times).
+- The application type is one of the following: T3, T4, T5, T6, or T19.
+- The application has one of the following classification values: C1000, C1200, C2000, C2100, or C3000.
 
-Summary and Recommendation
+# Alternative Method:
 
-Overall, by optimizing the model we are able to increase the accuracy to above 79%.
+While this model performed well and provided substantial accuracy, an alternative approach to consider is the Random Forest model, which is also well-suited for classification problems. Using the Random Forest model, we can achieve an accuracy close to 78%.
 
-This means we are able to correctly classify each of the points in the test data 79% of the time. In other words an applicant has a close to 80% chance of being successful if they have the following:
 
-The NAME of the applicant appears more than 5 times (they have applied more than 5 times)
-The type of APPLICATION is one of the following: T3, T4, T5, T6 and T19
-The application has the following values for CLASSIFICATION: C1000, C1200, C2000,C2100 and C3000.
-Alternative Method
 
-Although this model worked very well and provided a great deal of accuracy, an alternative approach to recommend is the Random Forest model as it is also suited for classification problems. Using the Random Forest model we can achieve close to 78% accuracy.
+
+
+
