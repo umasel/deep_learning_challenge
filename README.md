@@ -104,12 +104,12 @@ Below is my final report and analysis of the Neural Network Model, along with an
 - Model Architecture: The optimized model used 3 hidden layers with multiple neurons, which increased the accuracy from under 75% to 79%. The initial model had only 2 layers. While the number of epochs remained constant, adding a third layer improved the model's accuracy.
 - Target Performance: Yes, by optimizing the model, the accuracy increased from 72% to slightly over 79%.
 - Steps to Increase Performance:
-             - Instead of dropping both the EIN and NAME columns, only the EIN column was dropped. However, only names that appeared more than 5 times were considered.
-             - A third activation layer was added to the model in the following order to boost accuracy to over 75%:
-                      - 1st Layer: ReLU
-                      - 2nd Layer: Tanh
-                      - 3rd Layer: Sigmoid
-             - It was observed that using Tanh for the 2nd layer and Sigmoid for the 3rd layer boosted performance to over                   79%.
+  - Instead of dropping both the EIN and NAME columns, only the EIN column was dropped. However, only names that appeared more than 5 times were considered.
+  - A third activation layer was added to the model in the following order to boost accuracy to over 75%:
+     - 1st Layer: ReLU
+     - 2nd Layer: Tanh
+     - 3rd Layer: Sigmoid
+   - It was observed that using Tanh for the 2nd layer and Sigmoid for the 3rd layer boosted performance to over                   79%.
 
 ## Summary and Recommendation:
 
