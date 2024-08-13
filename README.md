@@ -87,16 +87,16 @@ Below is my final report and analysis of the Neural Network Model, along with an
 
 - Target Variable: The target variable for the model was identified as the column IS_SUCCESSFUL.
 - Feature Variables: The following columns were used as features for the model:
-           - NAME
-           - APPLICATION_TYPE
-           - AFFILIATION
-           - CLASSIFICATION
-           - USE_CASE
-           - ORGANIZATION
-           - STATUS
-           - INCOME_AMT
-           - SPECIAL_CONSIDERATIONS
-           - ASK_AMT
+  - NAME
+  - APPLICATION_TYPE
+  - AFFILIATION
+  - CLASSIFICATION
+  - USE_CASE
+  - ORGANIZATION
+  - STATUS
+  - INCOME_AMT
+  - SPECIAL_CONSIDERATIONS
+  - ASK_AMT
 - Variables to Remove: The EIN column was removed, as it serves only as an identifier for the applicant organization and does not affect the model's behavior.
 
 ## Compiling, Training, and Evaluating the Model:
