@@ -4,11 +4,6 @@
 
 Solution to predict whether or not applicants for Charity Funding will be successful based the process of Deep Learning.
 
-## Key Artifacts and Solution
-Jupyter Notebook for Initial Model
-Jupyter Notebook for Optimized Model
-Final_Analysis and Report on the Neural Network Model
-
 ## Background
 The non-profit foundation Alphabet Soup wants to create an algorithm to predict whether or not applicants for funding will be successful. With your knowledge of machine learning and neural networks, you’ll use the features in the provided dataset to create a binary classifier that is capable of predicting whether applicants will be successful if funded by Alphabet Soup.
 
@@ -33,8 +28,8 @@ Using your knowledge of Pandas and the Scikit-Learn’s StandardScaler(), you’
 Using the information we have provided in the starter code, follow the instructions to complete the preprocessing steps.
 
 1. Read in the charity_data.csv to a Pandas DataFrame, and be sure to identify the following in your dataset:
-- What variable(s) are considered the target(s) for your model?
-- What variable(s) are considered the feature(s) for your model?
+           - What variable(s) are considered the target(s) for your model?
+           - What variable(s) are considered the feature(s) for your model?
 2. Drop the EIN and NAME columns.
 3. Determine the number of unique values for each column.
 4. For those columns that have more than 10 unique values, determine the number of data points for each unique value.
@@ -62,9 +57,9 @@ Using your knowledge of TensorFlow, optimize your model in order to achieve a ta
 Optimize your model in order to achieve a target predictive accuracy higher than 75% by using any or all of the following:
 
 - Adjusting the input data to ensure that there are no variables or outliers that are causing confusion in the model, such as:
-        . Dropping more or fewer columns.
-        . Creating more bins for rare occurrences in columns.
-        . Increasing or decreasing the number of values for each bin.
+        - Dropping more or fewer columns.
+        - Creating more bins for rare occurrences in columns.
+        - Increasing or decreasing the number of values for each bin.
 - Adding more neurons to a hidden layer.
 - Adding more hidden layers.
 - Using different activation functions for the hidden layers.
